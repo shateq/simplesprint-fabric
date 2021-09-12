@@ -3,7 +3,7 @@
   "id": "simplesprint",
   "version": "${version}",
   "license": "MIT",
-  "icon": "assets/icon.png",
+  "icon": "assets/simplesprint/icon.png",
   "name": "SimpleSprint Fabric",
   "description": "Why would you spam this sprint key bind?",
   "authors": [
