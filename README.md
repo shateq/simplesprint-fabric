@@ -3,7 +3,7 @@
 # Simple Sprint - Fabric
 Basic (and open-source) toggle sprint for Minecraft! What it does, it's holding sprint key for you - when enabled.
 Created, while thinking of multiplayer mode - it shouldn't be violent in my opinion.
-Modification is based off Orange Marshall's "Simple Sprint" that was way too legacy to use with modern Fabric ecosystem so I refabricated that mod, adding some fancy gui and options.
+Modification is based off Orange Marshall's "Simple Sprint" that was way too legacy to use with modern Fabric ecosystem so I refabricated that mod, adding some fancy gui and options. There are plans for supporting older Fabric versions :)
 
 <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img src="https://i.imgur.com/Ol1Tcf8.png" width="256"></a>
 ---
