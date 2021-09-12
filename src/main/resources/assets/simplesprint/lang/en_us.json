@@ -1,0 +1,15 @@
+{
+  "simplesprint.option.enabled": "Toggle Sprint",
+  "simplesprint.option.enabled.text": "Sprinting for you automatically?",
+  "simplesprint.option.notification": "Notification",
+  "simplesprint.notification.actionbar": "Actionbar",
+  "simplesprint.notification.chat": "Chat",
+  "simplesprint.notification.sound": "Sound",
+  "simplesprint.notification.tooltip": "Notification after toggling sprint! \n%s - Quick message above your hotbar. \n%s - Send chat message. \n%s - Play notification sound.",
+  "simplesprint.status": "§f§lSprinting: %s",
+  "simplesprint.info.title": "What's going on here?",
+  "simplesprint.info.content": "Toggle Sprint is already in vanilla, why am I using this mod?! \nThere isn't any keybind for toggling the toggle off. Enjoy!",
+  "simplesprint.info.project": "[Github Repository]",
+  "key.simplesprint.sprint": "Toggle Sprint",
+  "modmenu.descriptionTranslation.simplesprint": "Toggle Sprint, cuz why would you spam this sprint key bind?"
+}

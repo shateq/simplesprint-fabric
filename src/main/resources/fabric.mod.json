@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "simplesprint",
+  "version": "${version}",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "name": "SimpleSprint Fabric",
+  "description": "Why would you spam this sprint key bind?",
+  "authors": [
+    "Shateq", "LambdAurora - SpruceUI creator - Inspiration to test it out", "OrangeMarshall - Formal Author"
+  ],
+  "contact": {
+    "homepage": "https://github.com/shateq/simplesprint-fabric",
+    "sources": "https://github.com/shateq/simplesprint-fabric.git",
+    "issues": "https://github.com/shateq/simplesprint-fabric/issues"
+  },
+  
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "shateq.mods.fabric.simplesprint.SimpleSprint"
+    ],
+    "modmenu": [
+      "shateq.mods.fabric.simplesprint.SimpleSprintModMenu"
+    ]
+  },
+  "mixins": ["simplesprint.mixins.json"],
+  
+  "depends": {
+    "java": ">=16",
+    "fabricloader": ">=0.11.3",
+    "fabric-lifecycle-events-v1": "*",
+    "fabric-key-binding-api-v1": "*",
+    "fabric-command-api-v1": "*",
+    "spruceui": "*"
+  },
+  "recommends": {
+    "modmenu": ">=2.0.6"
+  }
+}

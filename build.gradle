@@ -1,0 +1,68 @@
+plugins {
+	id "fabric-loom" version "0.9.45"
+}
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
+
+archivesBaseName = project.archives_base_name
+version = project.mod_version
+group = project.maven_group
+Set<String> fabric = [
+		"fabric-lifecycle-events-v1",
+		"fabric-key-binding-api-v1",
+		"fabric-command-api-v1"
+]
+
+// Just see https://docs.gradle.org/current/userguide/declaring_repositories.html
+repositories {
+	mavenLocal()
+	maven {
+		name 'TerraformersMC'
+		url 'https://maven.terraformersmc.com/'
+		content {
+			includeGroup 'com.terraformersmc'
+		}
+	}
+	maven {
+		name "Gegy"
+		url "https://maven.gegy.dev"
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	// FAPI
+	fabric.stream().map { fabricApi.module(it, project.fabric_version) }.forEach {
+		modImplementation it
+	}
+//	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+	modImplementation "dev.lambdaurora:spruceui:${project.spruceui_version}"
+	include "dev.lambdaurora:spruceui:${project.spruceui_version}"
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8" // Must have!
+	it.options.release.set(16)
+}
+
+java {
+	withSourcesJar()
+}
+
+jar {
+	from("LICENSE.md") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
+}
