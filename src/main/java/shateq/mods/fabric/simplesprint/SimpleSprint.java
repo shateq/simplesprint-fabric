@@ -40,16 +40,16 @@ public class SimpleSprint implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(client.player != null) {
+                final KeyBinding key = client.options.keySprint;
+
                 // Toggle
                 if (toggleKeyBinding.wasPressed()) {
+                    key.setPressed(false);
                     toggleSprint(client.player);
                 }
                 // Work
-                final KeyBinding key = client.options.keySprint;
                 if(enabled) {
                     key.setPressed(true);
-                } else {
-                    key.setPressed(false);
                 }
             }
         });

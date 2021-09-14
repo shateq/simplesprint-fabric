@@ -38,7 +38,6 @@ dependencies {
 	fabric.stream().map { fabricApi.module(it, project.fabric_version) }.forEach {
 		modImplementation it
 	}
-//	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 	modImplementation "dev.lambdaurora:spruceui:${project.spruceui_version}"
 	include "dev.lambdaurora:spruceui:${project.spruceui_version}"
